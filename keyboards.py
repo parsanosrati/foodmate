@@ -21,7 +21,15 @@ def meal_type_keyboard() -> InlineKeyboardMarkup:
         ],
         [
             InlineKeyboardButton(text="🍰 دسر", callback_data="دسر"),
+            InlineKeyboardButton(text="☕ نوشیدنی", callback_data="نوشیدنی"),
+        ],
+        [
+            InlineKeyboardButton(text="🥗 سالاد", callback_data="سالاد"),
+            InlineKeyboardButton(text="🍲 سوپ", callback_data="سوپ"),
+        ],
+        [
             InlineKeyboardButton(text="🎯 هر چیزی", callback_data="هر چیزی"),
+            InlineKeyboardButton(text="✏️ خودم می‌نویسم", callback_data="type_meal_type"),
         ],
     ])
 
@@ -41,7 +49,16 @@ def cuisine_keyboard() -> InlineKeyboardMarkup:
             InlineKeyboardButton(text="🇮🇳 هندی", callback_data="هندی"),
         ],
         [
+            InlineKeyboardButton(text="🇹🇷 ترکی", callback_data="ترکی"),
+            InlineKeyboardButton(text="🇬🇷 یونانی", callback_data="یونانی"),
+        ],
+        [
+            InlineKeyboardButton(text="🇱🇧 لبنانی", callback_data="لبنانی"),
+            InlineKeyboardButton(text="🇹🇭 تایلندی", callback_data="تایلندی"),
+        ],
+        [
             InlineKeyboardButton(text="🌍 هر نوعی", callback_data="هر نوعی"),
+            InlineKeyboardButton(text="✏️ خودم می‌نویسم", callback_data="type_cuisine"),
         ],
     ])
 
@@ -58,6 +75,7 @@ def cooking_time_keyboard() -> InlineKeyboardMarkup:
         ],
         [
             InlineKeyboardButton(text="⏰ فرقی نمی‌کنه", callback_data="هر مدتی"),
+            InlineKeyboardButton(text="✏️ خودم می‌نویسم", callback_data="type_cooking_time"),
         ],
     ])
 
@@ -65,15 +83,57 @@ def cooking_time_keyboard() -> InlineKeyboardMarkup:
 def dietary_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="🥗 گیاهخوار", callback_data="گیاهخوار"),
-            InlineKeyboardButton(text="🌱 وگان", callback_data="وگان"),
-        ],
-        [
-            InlineKeyboardButton(text="🚫🌾 بدون گلوتن", callback_data="بدون گلوتن"),
-            InlineKeyboardButton(text="🚫🥛 بدون لبنیات", callback_data="بدون لبنیات"),
-        ],
-        [
             InlineKeyboardButton(text="✅ محدودیتی ندارم", callback_data="بدون محدودیت"),
+            InlineKeyboardButton(text="🥗 گیاهخوار", callback_data="گیاهخوار"),
+        ],
+        [
+            InlineKeyboardButton(text="🌱 وگان", callback_data="وگان"),
+            InlineKeyboardButton(text="🚫🌾 بدون گلوتن", callback_data="بدون گلوتن"),
+        ],
+        [
+            InlineKeyboardButton(text="🚫🥛 بدون لبنیات", callback_data="بدون لبنیات"),
+            InlineKeyboardButton(text="🍗 فقط مرغ", callback_data="فقط مرغ"),
+        ],
+        [
+            InlineKeyboardButton(text="🐟 فقط ماهی", callback_data="فقط ماهی"),
+            InlineKeyboardButton(text="💪 پروتئین بالا", callback_data="پروتئین بالا"),
+        ],
+        [
+            InlineKeyboardButton(text="🥦 کم‌کالری/رژیمی", callback_data="کم‌کالری و رژیمی"),
+            InlineKeyboardButton(text="🫀 کم‌نمک", callback_data="کم‌نمک"),
+        ],
+        [
+            InlineKeyboardButton(text="🩺 دیابتی", callback_data="مناسب دیابت"),
+            InlineKeyboardButton(text="✏️ خودم می‌نویسم", callback_data="type_dietary"),
+        ],
+    ])
+
+
+def spicy_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="😊 اصلاً تند نباشه", callback_data="بدون تندی"),
+            InlineKeyboardButton(text="🌶 کمی تند", callback_data="کمی تند"),
+        ],
+        [
+            InlineKeyboardButton(text="🌶🌶 متوسط", callback_data="متوسط تند"),
+            InlineKeyboardButton(text="🌶🌶🌶 خیلی تند", callback_data="خیلی تند"),
+        ],
+        [
+            InlineKeyboardButton(text="🎯 فرقی نمی‌کنه", callback_data="هر میزان تندی"),
+        ],
+    ])
+
+
+def difficulty_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="👶 آسان (مبتدی)", callback_data="آسان"),
+            InlineKeyboardButton(text="👨‍🍳 متوسط", callback_data="متوسط"),
+        ],
+        [
+            InlineKeyboardButton(text="👨‍🎓 حرفه‌ای", callback_data="حرفه‌ای"),
+            InlineKeyboardButton(text="🎯 فرقی نمی‌کنه", callback_data="هر سطحی"),
         ],
     ])
 
